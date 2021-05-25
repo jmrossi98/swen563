@@ -1,4 +1,4 @@
-# swen563
+# SWEN563: Real-Time and Embedded Systems
 Projects compiled/run using STM32CubeIDE 1.5.1
 
 All are executed on a STM32L476VGTX discovery board using Tera Term/PuTTy for UART
