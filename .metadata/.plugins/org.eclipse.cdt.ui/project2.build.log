@@ -1,0 +1,16 @@
+20:36:08 **** Build of configuration Debug for project project2 ****
+make -j4 all 
+arm-none-eabi-objdump -h -S  project2.elf  > "project2.list"
+arm-none-eabi-objcopy  -O binary  project2.elf  "project2.bin"
+arm-none-eabi-size   project2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9920	   1736	   1664	  13320	   3408	project2.elf
+Finished building: default.size.stdout
+ 
+Finished building: project2.bin
+ 
+Finished building: project2.list
+ 
+
+20:36:09 Build Finished. 0 errors, 0 warnings. (took 547ms)
+

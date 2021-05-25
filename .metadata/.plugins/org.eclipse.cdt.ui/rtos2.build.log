@@ -1,0 +1,25 @@
+23:41:18 **** Incremental Build of configuration Debug for project rtos2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/bank.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../USB_HOST/App -I../USB_HOST/Target -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/bank.d" -MT"Core/Src/bank.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/bank.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../USB_HOST/App -I../USB_HOST/Target -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/bank.c: In function 'bank_thread':
+../Core/Src/bank.c:138:13: warning: unused variable 'end' [-Wunused-variable]
+  138 |  TickType_t end = xTaskGetTickCount();
+      |             ^~~
+arm-none-eabi-gcc -o "rtos2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Jake\STM32CubeIDE\workspace_1.5.1\rtos2\STM32L476VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="rtos2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: rtos2.elf
+ 
+arm-none-eabi-objdump -h -S  rtos2.elf  > "rtos2.list"
+arm-none-eabi-objcopy  -O binary  rtos2.elf  "rtos2.bin"
+arm-none-eabi-size   rtos2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  67572	    520	  14416	  82508	  1424c	rtos2.elf
+Finished building: default.size.stdout
+ 
+Finished building: rtos2.bin
+ 
+Finished building: rtos2.list
+ 
+
+23:41:21 Build Finished. 0 errors, 1 warnings. (took 2s.685ms)
+

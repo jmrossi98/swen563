@@ -1,0 +1,122 @@
+//Gwen Munson, Mason Jordan
+//SWEN 563 Project 2a: main.c
+//Simultaneously control a pair of servo monitors 
+
+#include "stm32l476xx.h"
+#include "SysClock.h"
+#include "LED.h"
+#include "UART.h"
+
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_U32_DIGIT_SIZE 10
+#define MAX_LOW_LIMIT 9950 //given in problem statment
+#define DEFAULT_LOW_LIMIT 950 //given in problem statment
+#define MIN_LOW_LIMIT 50 //given in problem statment
+#define NUMBER_OF_PULSES 1000 
+#define RANGE_OF_TIMES 100
+#define MAX_BUCKET_COUNT 5 
+
+char currLow[40];//current low used for display purposes
+char input[10];//used for grabbing user input
+char outputModifier[] = "\r\n";//used to display output on its own line
+
+/**
+  Prints out the combination of a formated string and a single value to USART
+	@param text The formatted string
+	@param value The value to print out within the string
+**/
+
+void printStringInt(char* text, int value){
+	int bufSize=strlen(text)+MAX_U32_DIGIT_SIZE+1;
+	char textBuffer[bufSize];
+	sprintf(textBuffer,text, value);
+	USART_Write(USART2, (uint8_t *)textBuffer, bufSize);
+	memset(textBuffer,0,strlen(textBuffer));
+}
+
+/*
+* PSEUDOCODE:
+* Set TIM2CH1 and TIM2CH2 for output (these send signals to the servo motor)
+* Set timer prescaler so that it resets every 100 milliseconds
+* 
+ */
+
+void set_timer2(){
+	
+	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN; //Timer 2 is now enabled
+	TIM2->PSC = 7999;
+	TIM2->EGR |= TIM_EGR_UG; //generates update event for Timer 2
+	
+	//set up TIM2CH1 for PWM mode
+	TIM2->CCMR1 &= ~TIM_CCMR1_OC1M_0;//clear bit 0 of the OCIM1
+	TIM2->CCMR1 |= TIM_CCMR1_OC1M_1;//set bit 1 of the OCIM1
+	TIM2->CCMR1 |= TIM_CCMR1_OC1M_2;//set bit 2 of the OCIM1
+	TIM2->CCMR1 &= ~TIM_CCMR1_OC1M_3;//clear bit 3 of the OCIM1
+	
+	//set up TIM2CH2 for PWM mode
+	TIM2->CCMR1 &= ~TIM_CCMR1_OC2M_0;//clear bit 0 of the OCIM1
+	TIM2->CCMR1 |= TIM_CCMR1_OC2M_1;//set bit 1 of the OCIM1
+	TIM2->CCMR1 |= TIM_CCMR1_OC2M_2;//set bit 2 of the OCIM1
+	TIM2->CCMR1 &= ~TIM_CCMR1_OC2M_3;//clear bit 3 of the OCIM1
+	
+	TIM2->CR1 |= TIM_CR1_ARPE;//TIM_ARR register is buffered - needed for PWM mode
+	
+	TIM2->CCMR1 |= TIM_CCMR1_OC1PE;//preloader enable for CH1
+	TIM2->CCMR1 |= TIM_CCMR1_OC2PE;//preloader enable for CH2
+	
+	//configure Channel 1 for output
+	TIM2->CCMR1 &= ~TIM_CCMR1_CC1S_0; //clear bit 0 of CC1S
+	TIM2->CCMR1 &= ~TIM_CCMR1_CC1S_1; //clear bit 1 of CC1S
+	TIM2->CCER |= TIM_CCER_CC1E; //the signal is now output
+	
+	//configure Channel 2 for output
+	TIM2->CCMR1 &= ~TIM_CCMR1_CC2S_0; //clear bit 0 of CC2S
+	TIM2->CCMR1 &= ~TIM_CCMR1_CC2S_1; //clear bit 1 of CC2S
+	TIM2->CCER |= TIM_CCER_CC2E; //the signal is now output
+	
+	TIM2->EGR |= TIM_EGR_UG; //generates update event for Timer 2
+	
+	TIM2->ARR = 200;//200 is the period length for the servo motor
+	TIM2->CCR1 = 50;//25% duty cycle
+	TIM2->CCR2 = 100;//50% duty cycle
+}
+
+void init_pa0( void )
+{
+	RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN ;		// enable clock for A group of GPIO
+	GPIOA->MODER &= ~3 ;										// clear out bits 0 and 1 for PA0
+																					// PA0 is now in input mode
+	GPIOA->MODER |= 2 ;									    // Enable alternate function mode (binary 10) for PA0
+	GPIOA->AFR[0] |= 0x1; 
+}
+
+void init_pa1( void )
+{
+	RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN ;		// enable clock for A group of GPIO
+	GPIOA->MODER &= ~0xC ;									// clear out bits 0 and 1 for PA1
+																					// PA1 is now in input mode
+	GPIOA->MODER |= 8 ;									    // Enable alternate function mode (binary 10) for PA1
+	GPIOA->AFR[0] |= 0x10; 
+}
+
+
+int main(void){
+	//char  rxByte;
+	
+	//Initialization	
+	System_Clock_Init(); // Switch System Clock = 80 MHz normally
+	LED_Init();
+	UART2_Init();
+	set_timer2();
+	init_pa0();
+	init_pa1();
+	
+	TIM2->CR1 |= TIM_CR1_CEN;
+	
+	while (1){
+
+	}//end while loop
+}//end main

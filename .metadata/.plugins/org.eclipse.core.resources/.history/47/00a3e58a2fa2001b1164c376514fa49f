@@ -1,0 +1,165 @@
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include "FreeRTOS.h"
+#include "FreeRTOSConfig.h"
+#include <stdint.h>
+#include "string.h"
+#include "semphr.h"
+#include "queue.h"
+#include "task.h"
+#include "cmsis_os.h"
+#include "usart.h"
+#include "rng.h"
+#include <stdbool.h>
+
+char* null = (void *)0;
+#define MOV (32)
+#define WAIT (64)
+#define LOOP (128)
+#define END_LOOP (160)
+#define RECIPE_END (0)
+#define ERROR (192)
+#define ZERO_DEGREES (5)
+#define THIRY_TWO_DEGREES (7)
+#define SIXTY_FOUR_DEGREES (10)
+#define NINETY_SIX_DEGREES (13)
+#define ONE_HUNDRED_AND_TWENTY_EIGHT_DEGREES (16)
+#define ONE_HUNDRED_AND_SIXTY_DEGREES (19)
+
+typedef enum {
+	inactive,
+	active,
+	paused,
+} servo_status;
+
+typedef enum {
+	idle,
+	running,
+} recipe_status;
+
+typedef enum {
+	zero_degrees,
+	thiry_two_degrees,
+	sixty_four_degrees,
+	ninety_six_degrees,
+	one_hundred_and_twenty_eight_degrees,
+	one_hundred_and_sixty_degrees,
+	END_OF_POSITION_ARRAY
+} position;
+
+typedef struct{
+	servo_status status;
+	position position;
+	uint16_t last_start;
+	position next_pos;
+	uint16_t delay;
+	recipe_status recipe_status;
+	int recipe_idx;
+	int instr_idx;
+	int loop_cnt;
+	int is_in_loop;
+	int loop_idx;
+} servo_data;
+
+typedef struct{
+	uint8_t opcode;
+	uint8_t parameter;
+} current_instruction;
+
+extern int positions[END_OF_POSITION_ARRAY];
+
+int positions[END_OF_POSITION_ARRAY] = {
+	ZERO_DEGREES,
+	THIRY_TWO_DEGREES,
+	SIXTY_FOUR_DEGREES,
+	NINETY_SIX_DEGREES,
+	ONE_HUNDRED_AND_TWENTY_EIGHT_DEGREES,
+	ONE_HUNDRED_AND_SIXTY_DEGREES
+};
+
+servo_data servos[2];
+
+int recipes[4][100] = {
+	{
+		MOV + 0,
+		MOV + 5,
+		MOV + 0,
+		MOV + 3,
+		LOOP + 0,
+		MOV + 1,
+		MOV + 4,
+		END_LOOP,
+		MOV + 0,
+		MOV + 2,
+		WAIT + 0,
+		MOV + 3,
+		WAIT + 0,
+		MOV + 2,
+		MOV + 3,
+		WAIT + 31,
+		WAIT + 31,
+		WAIT + 31,
+		MOV + 4,
+		RECIPE_END
+	},
+	{
+		MOV + 0,
+		MOV + 1,
+		MOV + 2,
+		MOV + 3,
+		MOV + 4,
+		MOV + 5,
+		RECIPE_END
+	},
+	{
+		MOV + 5,
+		ERROR + 1,
+		MOV + 1,
+		RECIPE_END
+	},
+	{
+		MOV + 2,
+		LOOP + 1,
+		MOV + 1,
+		LOOP + 1,
+		MOV + 5,
+		END_LOOP,
+		END_LOOP,
+		RECIPE_END,
+		MOV + 1,
+		RECIPE_END
+	}
+};
+
+void write_cmd(char *message);
+void usart_real_time_write(char data, int print_newline);
+void usart_write_data_string(char *message, ...);
+int is_valid(char *input, char *valid_characters);
+int check_for_continuation();
+int stop();
+void delay(uint32_t delay_time);
+uint16_t calculate_delay(position last_position, position new_position, int recipe);
+void start_timer(int servo_num);
+void start_timers();
+void stop_timer(int servo_num);
+void stop_timers();
+uint16_t get_current_measurement(int servo_num);
+uint16_t get_current_sys_time(int servo_num);
+uint16_t move_motor(int motor_num, servo_data *motor, uint16_t next_pos, int recipe);
+uint8_t get_opcode(uint8_t byte_register);
+uint8_t get_parameter(uint8_t byte_register);
+current_instruction get_instruction(uint8_t byte_register);
+int instruction_in_bounds(current_instruction instruction);
+void increment_recipe(servo_data *motor);
+void reset_servo(int index, servo_data *motor, int restart);
+void reset_all_servos(int restart);
+int servo_ready(int servo_num);
+int some_servo_inactive(servo_data *servos);
+int both_servos_inactive_or_paused(servo_data *servos);
+int parse_cmd(char commands[2]);
+void run_recipe();
+int get_cmd();
+void additional_init(void);
+int thread_initialize(void);

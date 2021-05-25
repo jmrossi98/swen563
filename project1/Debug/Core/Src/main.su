@@ -1,0 +1,4 @@
+main.c:16:6:gpio_and_timer_init	4	static
+main.c:39:5:post	24	static
+main.c:67:6:measure	32	static
+main.c:96:5:main	104	static

@@ -1,0 +1,1715 @@
+10:34:10 **** Incremental Build of configuration Debug for project Bank_Simulator ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/client_queue.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/client_queue.d" -MT"Core/Src/client_queue.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/client_queue.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32l4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32l4xx_hal_msp.d" -MT"Core/Src/stm32l4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32l4xx_hal_msp.o"
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:105:12: error: unknown type name '__DEV_T_TYPE'
+  105 | __STD_TYPE __DEV_T_TYPE __dev_t;        /* Type of device numbers.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:105:25: error: conflicting types for '__dev_t'
+  105 | __STD_TYPE __DEV_T_TYPE __dev_t;        /* Type of device numbers.  */
+      |                         ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:56:15: note: previous declaration of '__dev_t' was here
+   56 | typedef short __dev_t;
+      |               ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:106:12: error: unknown type name '__UID_T_TYPE'
+  106 | __STD_TYPE __UID_T_TYPE __uid_t;        /* Type of user identifications.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:106:25: error: conflicting types for '__uid_t'
+  106 | __STD_TYPE __UID_T_TYPE __uid_t;        /* Type of user identifications.  */
+      |                         ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:60:24: note: previous declaration of '__uid_t' was here
+   60 | typedef unsigned short __uid_t;
+      |                        ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:107:12: error: unknown type name '__GID_T_TYPE'
+  107 | __STD_TYPE __GID_T_TYPE __gid_t;        /* Type of group identifications.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:107:25: error: conflicting types for '__gid_t'
+  107 | __STD_TYPE __GID_T_TYPE __gid_t;        /* Type of group identifications.  */
+      |                         ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:63:24: note: previous declaration of '__gid_t' was here
+   63 | typedef unsigned short __gid_t;
+      |                        ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:105:12: error: unknown type name '__DEV_T_TYPE'
+  105 | __STD_TYPE __DEV_T_TYPE __dev_t;        /* Type of device numbers.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:105:25: error: conflicting types for '__dev_t'
+  105 | __STD_TYPE __DEV_T_TYPE __dev_t;        /* Type of device numbers.  */
+      |                         ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:56:15: note: previous declaration of '__dev_t' was here
+   56 | typedef short __dev_t;
+      |               ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:108:12: error: unknown type name '__INO_T_TYPE'
+  108 | __STD_TYPE __INO_T_TYPE __ino_t;        /* Type of file serial numbers.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:108:25: error: conflicting types for '__ino_t'
+  108 | __STD_TYPE __INO_T_TYPE __ino_t;        /* Type of file serial numbers.  */
+      |                         ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:75:24: note: previous declaration of '__ino_t' was here
+   75 | typedef unsigned short __ino_t;
+      |                        ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:106:12: error: unknown type name '__UID_T_TYPE'
+  106 | __STD_TYPE __UID_T_TYPE __uid_t;        /* Type of user identifications.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:106:25: error: conflicting types for '__uid_t'
+  106 | __STD_TYPE __UID_T_TYPE __uid_t;        /* Type of user identifications.  */
+      |                         ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:109:12: error: unknown type name '__INO64_T_TYPE'
+  109 | __STD_TYPE __INO64_T_TYPE __ino64_t;        /* Type of file serial numbers (LFS).*/
+      |            ^~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:60:24: note: previous declaration of '__uid_t' was here
+   60 | typedef unsigned short __uid_t;
+      |                        ^~~~~~~
+../Core/Inc/bits/types.h:110:12: error: unknown type name '__MODE_T_TYPE'
+  110 | __STD_TYPE __MODE_T_TYPE __mode_t;        /* Type of file attribute bitmasks.  */
+      |            ^~~~~~~~~~~~~
+../Core/Inc/bits/types.h:110:26: error: conflicting types for '__mode_t'
+  110 | __STD_TYPE __MODE_T_TYPE __mode_t;        /* Type of file attribute bitmasks.  */
+      |                          ^~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:107:12: error: unknown type name '__GID_T_TYPE'
+  107 | __STD_TYPE __GID_T_TYPE __gid_t;        /* Type of group identifications.  */
+      |            ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:90:20: note: previous declaration of '__mode_t' was here
+   90 | typedef __uint32_t __mode_t;
+      |                    ^~~~~~~~
+../Core/Inc/bits/types.h:107:25: error: conflicting types for '__gid_t'
+  107 | __STD_TYPE __GID_T_TYPE __gid_t;        /* Type of group identifications.  */
+      |                         ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:111:12: error: unknown type name '__NLINK_T_TYPE'
+  111 | __STD_TYPE __NLINK_T_TYPE __nlink_t;        /* Type of file link counts.  */
+      |            ^~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:105:12: error: unknown type name '__DEV_T_TYPE'
+  105 | __STD_TYPE __DEV_T_TYPE __dev_t;        /* Type of device numbers.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:111:27: error: conflicting types for '__nlink_t'
+  111 | __STD_TYPE __NLINK_T_TYPE __nlink_t;        /* Type of file link counts.  */
+      |                           ^~~~~~~~~
+../Core/Inc/bits/types.h:105:25: error: conflicting types for '__dev_t'
+  105 | __STD_TYPE __DEV_T_TYPE __dev_t;        /* Type of device numbers.  */
+      |                         ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:209:24: note: previous declaration of '__nlink_t' was here
+  209 | typedef unsigned short __nlink_t;
+      |                        ^~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:63:24: note: previous declaration of '__gid_t' was here
+   63 | typedef unsigned short __gid_t;
+      |                        ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:105:12: error: unknown type name '__DEV_T_TYPE'
+  105 | __STD_TYPE __DEV_T_TYPE __dev_t;        /* Type of device numbers.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:105:25: error: conflicting types for '__dev_t'
+  105 | __STD_TYPE __DEV_T_TYPE __dev_t;        /* Type of device numbers.  */
+      |                         ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:108:12: error: unknown type name '__INO_T_TYPE'
+  108 | __STD_TYPE __INO_T_TYPE __ino_t;        /* Type of file serial numbers.  */
+      |            ^~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:112:12: error: unknown type name '__OFF_T_TYPE'
+  112 | __STD_TYPE __OFF_T_TYPE __off_t;        /* Type of file sizes and offsets.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:112:25: error: conflicting types for '__off_t'
+  112 | __STD_TYPE __OFF_T_TYPE __off_t;        /* Type of file sizes and offsets.  */
+      |                         ^~~~~~~
+../Core/Inc/bits/types.h:108:25: error: conflicting types for '__ino_t'
+  108 | __STD_TYPE __INO_T_TYPE __ino_t;        /* Type of file serial numbers.  */
+      |                         ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:75:24: note: previous declaration of '__ino_t' was here
+   75 | typedef unsigned short __ino_t;
+      |                        ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:102:16: note: previous declaration of '__off_t' was here
+  102 | typedef _off_t __off_t;
+      |                ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:56:15: note: previous declaration of '__dev_t' was here
+   56 | typedef short __dev_t;
+      |               ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:56:15: note: previous declaration of '__dev_t' was here
+   56 | typedef short __dev_t;
+      |               ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:113:12: error: unknown type name '__OFF64_T_TYPE'
+  113 | __STD_TYPE __OFF64_T_TYPE __off64_t;        /* Type of file sizes and offsets (LFS).  */
+      |            ^~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:114:12: error: unknown type name '__PID_T_TYPE'
+  114 | __STD_TYPE __PID_T_TYPE __pid_t;        /* Type of process identifications.  */
+      |            ^~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:109:12: error: unknown type name '__INO64_T_TYPE'
+  109 | __STD_TYPE __INO64_T_TYPE __ino64_t;        /* Type of file serial numbers (LFS).*/
+      |            ^~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:106:12: error: unknown type name '__UID_T_TYPE'
+  106 | __STD_TYPE __UID_T_TYPE __uid_t;        /* Type of user identifications.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:110:12: error: unknown type name '__MODE_T_TYPE'
+  110 | __STD_TYPE __MODE_T_TYPE __mode_t;        /* Type of file attribute bitmasks.  */
+      |            ^~~~~~~~~~~~~
+../Core/Inc/bits/types.h:110:26: error: conflicting types for '__mode_t'
+  110 | __STD_TYPE __MODE_T_TYPE __mode_t;        /* Type of file attribute bitmasks.  */
+      |                          ^~~~~~~~
+../Core/Inc/bits/types.h:106:25: error: conflicting types for '__uid_t'
+  106 | __STD_TYPE __UID_T_TYPE __uid_t;        /* Type of user identifications.  */
+      |                         ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:106:12: error: unknown type name '__UID_T_TYPE'
+  106 | __STD_TYPE __UID_T_TYPE __uid_t;        /* Type of user identifications.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:106:25: error: conflicting types for '__uid_t'
+  106 | __STD_TYPE __UID_T_TYPE __uid_t;        /* Type of user identifications.  */
+      |                         ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:60:24: note: previous declaration of '__uid_t' was here
+   60 | typedef unsigned short __uid_t;
+      |                        ^~~~~~~
+../Core/Inc/bits/types.h:115:12: error: unknown type name '__FSID_T_TYPE'
+  115 | __STD_TYPE __FSID_T_TYPE __fsid_t;        /* Type of file system IDs.  */
+      |            ^~~~~~~~~~~~~
+../Core/Inc/bits/types.h:116:12: error: unknown type name '__CLOCK_T_TYPE'
+  116 | __STD_TYPE __CLOCK_T_TYPE __clock_t;        /* Type of CPU usage counts.  */
+      |            ^~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:107:12: error: unknown type name '__GID_T_TYPE'
+  107 | __STD_TYPE __GID_T_TYPE __gid_t;        /* Type of group identifications.  */
+      |            ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:90:20: note: previous declaration of '__mode_t' was here
+   90 | typedef __uint32_t __mode_t;
+      |                    ^~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:60:24: note: previous declaration of '__uid_t' was here
+   60 | typedef unsigned short __uid_t;
+      |                        ^~~~~~~
+../Core/Inc/bits/types.h:107:25: error: conflicting types for '__gid_t'
+  107 | __STD_TYPE __GID_T_TYPE __gid_t;        /* Type of group identifications.  */
+      |                         ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:63:24: note: previous declaration of '__gid_t' was here
+   63 | typedef unsigned short __gid_t;
+      |                        ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:107:12: error: unknown type name '__GID_T_TYPE'
+  107 | __STD_TYPE __GID_T_TYPE __gid_t;        /* Type of group identifications.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:116:27: error: conflicting types for '__clock_t'
+  116 | __STD_TYPE __CLOCK_T_TYPE __clock_t;        /* Type of CPU usage counts.  */
+      |                           ^~~~~~~~~
+../Core/Inc/bits/types.h:107:25: error: conflicting types for '__gid_t'
+  107 | __STD_TYPE __GID_T_TYPE __gid_t;        /* Type of group identifications.  */
+      |                         ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:108:12: error: unknown type name '__INO_T_TYPE'
+  108 | __STD_TYPE __INO_T_TYPE __ino_t;        /* Type of file serial numbers.  */
+      |            ^~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:111:12: error: unknown type name '__NLINK_T_TYPE'
+  111 | __STD_TYPE __NLINK_T_TYPE __nlink_t;        /* Type of file link counts.  */
+      |            ^~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:182:19: note: previous declaration of '__clock_t' was here
+  182 | typedef _CLOCK_T_ __clock_t;
+      |                   ^~~~~~~~~
+../Core/Inc/bits/types.h:108:25: error: conflicting types for '__ino_t'
+  108 | __STD_TYPE __INO_T_TYPE __ino_t;        /* Type of file serial numbers.  */
+      |                         ^~~~~~~
+../Core/Inc/bits/types.h:111:27: error: conflicting types for '__nlink_t'
+  111 | __STD_TYPE __NLINK_T_TYPE __nlink_t;        /* Type of file link counts.  */
+      |                           ^~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:75:24: note: previous declaration of '__ino_t' was here
+   75 | typedef unsigned short __ino_t;
+      |                        ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:117:12: error: unknown type name '__RLIM_T_TYPE'
+  117 | __STD_TYPE __RLIM_T_TYPE __rlim_t;        /* Type for resource measurement.  */
+      |            ^~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:63:24: note: previous declaration of '__gid_t' was here
+   63 | typedef unsigned short __gid_t;
+      |                        ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:109:12: error: unknown type name '__INO64_T_TYPE'
+  109 | __STD_TYPE __INO64_T_TYPE __ino64_t;        /* Type of file serial numbers (LFS).*/
+      |            ^~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:108:12: error: unknown type name '__INO_T_TYPE'
+  108 | __STD_TYPE __INO_T_TYPE __ino_t;        /* Type of file serial numbers.  */
+      |            ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:209:24: note: previous declaration of '__nlink_t' was here
+  209 | typedef unsigned short __nlink_t;
+      |                        ^~~~~~~~~
+../Core/Inc/bits/types.h:108:25: error: conflicting types for '__ino_t'
+  108 | __STD_TYPE __INO_T_TYPE __ino_t;        /* Type of file serial numbers.  */
+      |                         ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:112:12: error: unknown type name '__OFF_T_TYPE'
+  112 | __STD_TYPE __OFF_T_TYPE __off_t;        /* Type of file sizes and offsets.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:110:12: error: unknown type name '__MODE_T_TYPE'
+  110 | __STD_TYPE __MODE_T_TYPE __mode_t;        /* Type of file attribute bitmasks.  */
+      |            ^~~~~~~~~~~~~
+../Core/Inc/bits/types.h:118:12: error: unknown type name '__RLIM64_T_TYPE'
+  118 | __STD_TYPE __RLIM64_T_TYPE __rlim64_t;        /* Type for resource measurement (LFS).  */
+      |            ^~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:110:26: error: conflicting types for '__mode_t'
+  110 | __STD_TYPE __MODE_T_TYPE __mode_t;        /* Type of file attribute bitmasks.  */
+      |                          ^~~~~~~~
+../Core/Inc/bits/types.h:119:12: error: unknown type name '__ID_T_TYPE'
+  119 | __STD_TYPE __ID_T_TYPE __id_t;                /* General type for IDs.  */
+      |            ^~~~~~~~~~~
+../Core/Inc/bits/types.h:119:24: error: conflicting types for '__id_t'
+  119 | __STD_TYPE __ID_T_TYPE __id_t;                /* General type for IDs.  */
+      |                        ^~~~~~
+../Core/Inc/bits/types.h:112:25: error: conflicting types for '__off_t'
+  112 | __STD_TYPE __OFF_T_TYPE __off_t;        /* Type of file sizes and offsets.  */
+      |                         ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:102:16: note: previous declaration of '__off_t' was here
+  102 | typedef _off_t __off_t;
+      |                ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:90:20: note: previous declaration of '__mode_t' was here
+   90 | typedef __uint32_t __mode_t;
+      |                    ^~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:67:20: note: previous declaration of '__id_t' was here
+   67 | typedef __uint32_t __id_t;
+      |                    ^~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:113:12: error: unknown type name '__OFF64_T_TYPE'
+  113 | __STD_TYPE __OFF64_T_TYPE __off64_t;        /* Type of file sizes and offsets (LFS).  */
+      |            ^~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:111:12: error: unknown type name '__NLINK_T_TYPE'
+  111 | __STD_TYPE __NLINK_T_TYPE __nlink_t;        /* Type of file link counts.  */
+      |            ^~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:75:24: note: previous declaration of '__ino_t' was here
+   75 | typedef unsigned short __ino_t;
+      |                        ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:120:12: error: unknown type name '__TIME_T_TYPE'
+  120 | __STD_TYPE __TIME_T_TYPE __time_t;        /* Seconds since the Epoch.  */
+      |            ^~~~~~~~~~~~~
+../Core/Inc/bits/types.h:120:26: error: conflicting types for '__time_t'
+  120 | __STD_TYPE __TIME_T_TYPE __time_t;        /* Seconds since the Epoch.  */
+      |                          ^~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:189:18: note: previous declaration of '__time_t' was here
+  189 | typedef _TIME_T_ __time_t;
+      |                  ^~~~~~~~
+../Core/Inc/bits/types.h:111:27: error: conflicting types for '__nlink_t'
+  111 | __STD_TYPE __NLINK_T_TYPE __nlink_t;        /* Type of file link counts.  */
+      |                           ^~~~~~~~~
+../Core/Inc/bits/types.h:114:12: error: unknown type name '__PID_T_TYPE'
+  114 | __STD_TYPE __PID_T_TYPE __pid_t;        /* Type of process identifications.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:115:12: error: unknown type name '__FSID_T_TYPE'
+  115 | __STD_TYPE __FSID_T_TYPE __fsid_t;        /* Type of file system IDs.  */
+      |            ^~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:121:12: error: unknown type name '__USECONDS_T_TYPE'
+  121 | __STD_TYPE __USECONDS_T_TYPE __useconds_t; /* Count of microseconds.  */
+      |            ^~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:116:12: error: unknown type name '__CLOCK_T_TYPE'
+  116 | __STD_TYPE __CLOCK_T_TYPE __clock_t;        /* Type of CPU usage counts.  */
+      |            ^~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:116:27: error: conflicting types for '__clock_t'
+  116 | __STD_TYPE __CLOCK_T_TYPE __clock_t;        /* Type of CPU usage counts.  */
+      |                           ^~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:109:12: error: unknown type name '__INO64_T_TYPE'
+  109 | __STD_TYPE __INO64_T_TYPE __ino64_t;        /* Type of file serial numbers (LFS).*/
+      |            ^~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:121:30: error: conflicting types for '__useconds_t'
+  121 | __STD_TYPE __USECONDS_T_TYPE __useconds_t; /* Count of microseconds.  */
+      |                              ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:209:24: note: previous declaration of '__nlink_t' was here
+  209 | typedef unsigned short __nlink_t;
+      |                        ^~~~~~~~~
+../Core/Inc/bits/types.h:110:12: error: unknown type name '__MODE_T_TYPE'
+  110 | __STD_TYPE __MODE_T_TYPE __mode_t;        /* Type of file attribute bitmasks.  */
+      |            ^~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:211:23: note: previous declaration of '__useconds_t' was here
+  211 | typedef unsigned long __useconds_t; /* microseconds (unsigned) */
+      |                       ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:182:19: note: previous declaration of '__clock_t' was here
+  182 | typedef _CLOCK_T_ __clock_t;
+      |                   ^~~~~~~~~
+../Core/Inc/bits/types.h:110:26: error: conflicting types for '__mode_t'
+  110 | __STD_TYPE __MODE_T_TYPE __mode_t;        /* Type of file attribute bitmasks.  */
+      |                          ^~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:112:12: error: unknown type name '__OFF_T_TYPE'
+  112 | __STD_TYPE __OFF_T_TYPE __off_t;        /* Type of file sizes and offsets.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:112:25: error: conflicting types for '__off_t'
+  112 | __STD_TYPE __OFF_T_TYPE __off_t;        /* Type of file sizes and offsets.  */
+      |                         ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:102:16: note: previous declaration of '__off_t' was here
+  102 | typedef _off_t __off_t;
+      |                ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:90:20: note: previous declaration of '__mode_t' was here
+   90 | typedef __uint32_t __mode_t;
+      |                    ^~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:122:12: error: unknown type name '__SUSECONDS_T_TYPE'
+  122 | __STD_TYPE __SUSECONDS_T_TYPE __suseconds_t; /* Signed count of microseconds.  */
+      |            ^~~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:113:12: error: unknown type name '__OFF64_T_TYPE'
+  113 | __STD_TYPE __OFF64_T_TYPE __off64_t;        /* Type of file sizes and offsets (LFS).  */
+      |            ^~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:122:31: error: conflicting types for '__suseconds_t'
+  122 | __STD_TYPE __SUSECONDS_T_TYPE __suseconds_t; /* Signed count of microseconds.  */
+      |                               ^~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:117:12: error: unknown type name '__RLIM_T_TYPE'
+  117 | __STD_TYPE __RLIM_T_TYPE __rlim_t;        /* Type for resource measurement.  */
+      |            ^~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:111:12: error: unknown type name '__NLINK_T_TYPE'
+  111 | __STD_TYPE __NLINK_T_TYPE __nlink_t;        /* Type of file link counts.  */
+      |            ^~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:118:12: error: unknown type name '__RLIM64_T_TYPE'
+  118 | __STD_TYPE __RLIM64_T_TYPE __rlim64_t;        /* Type for resource measurement (LFS).  */
+      |            ^~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:114:12: error: unknown type name '__PID_T_TYPE'
+  114 | __STD_TYPE __PID_T_TYPE __pid_t;        /* Type of process identifications.  */
+      |            ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:210:15: note: previous declaration of '__suseconds_t' was here
+  210 | typedef long  __suseconds_t; /* microseconds (signed) */
+      |               ^~~~~~~~~~~~~
+../Core/Inc/bits/types.h:111:27: error: conflicting types for '__nlink_t'
+  111 | __STD_TYPE __NLINK_T_TYPE __nlink_t;        /* Type of file link counts.  */
+      |                           ^~~~~~~~~
+../Core/Inc/bits/types.h:119:12: error: unknown type name '__ID_T_TYPE'
+  119 | __STD_TYPE __ID_T_TYPE __id_t;                /* General type for IDs.  */
+      |            ^~~~~~~~~~~
+../Core/Inc/bits/types.h:119:24: error: conflicting types for '__id_t'
+  119 | __STD_TYPE __ID_T_TYPE __id_t;                /* General type for IDs.  */
+      |                        ^~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:123:12: error: unknown type name '__DADDR_T_TYPE'
+  123 | __STD_TYPE __DADDR_T_TYPE __daddr_t;        /* The type of a disk address.  */
+      |            ^~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:115:12: error: unknown type name '__FSID_T_TYPE'
+  115 | __STD_TYPE __FSID_T_TYPE __fsid_t;        /* Type of file system IDs.  */
+      |            ^~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:209:24: note: previous declaration of '__nlink_t' was here
+  209 | typedef unsigned short __nlink_t;
+      |                        ^~~~~~~~~
+../Core/Inc/bits/types.h:116:12: error: unknown type name '__CLOCK_T_TYPE'
+  116 | __STD_TYPE __CLOCK_T_TYPE __clock_t;        /* Type of CPU usage counts.  */
+      |            ^~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:67:20: note: previous declaration of '__id_t' was here
+   67 | typedef __uint32_t __id_t;
+      |                    ^~~~~~
+../Core/Inc/bits/types.h:124:12: error: unknown type name '__KEY_T_TYPE'
+  124 | __STD_TYPE __KEY_T_TYPE __key_t;        /* Type of an IPC key.  */
+      |            ^~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:112:12: error: unknown type name '__OFF_T_TYPE'
+  112 | __STD_TYPE __OFF_T_TYPE __off_t;        /* Type of file sizes and offsets.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:124:25: error: conflicting types for '__key_t'
+  124 | __STD_TYPE __KEY_T_TYPE __key_t;        /* Type of an IPC key.  */
+      |                         ^~~~~~~
+../Core/Inc/bits/types.h:112:25: error: conflicting types for '__off_t'
+  112 | __STD_TYPE __OFF_T_TYPE __off_t;        /* Type of file sizes and offsets.  */
+      |                         ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:120:12: error: unknown type name '__TIME_T_TYPE'
+  120 | __STD_TYPE __TIME_T_TYPE __time_t;        /* Seconds since the Epoch.  */
+      |            ^~~~~~~~~~~~~
+../Core/Inc/bits/types.h:116:27: error: conflicting types for '__clock_t'
+  116 | __STD_TYPE __CLOCK_T_TYPE __clock_t;        /* Type of CPU usage counts.  */
+      |                           ^~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:102:16: note: previous declaration of '__off_t' was here
+  102 | typedef _off_t __off_t;
+      |                ^~~~~~~
+../Core/Inc/bits/types.h:120:26: error: conflicting types for '__time_t'
+  120 | __STD_TYPE __TIME_T_TYPE __time_t;        /* Seconds since the Epoch.  */
+      |                          ^~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:182:19: note: previous declaration of '__clock_t' was here
+  182 | typedef _CLOCK_T_ __clock_t;
+      |                   ^~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:108:14: note: previous declaration of '__key_t' was here
+  108 | typedef long __key_t;
+      |              ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:113:12: error: unknown type name '__OFF64_T_TYPE'
+  113 | __STD_TYPE __OFF64_T_TYPE __off64_t;        /* Type of file sizes and offsets (LFS).  */
+      |            ^~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:189:18: note: previous declaration of '__time_t' was here
+  189 | typedef _TIME_T_ __time_t;
+      |                  ^~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:117:12: error: unknown type name '__RLIM_T_TYPE'
+  117 | __STD_TYPE __RLIM_T_TYPE __rlim_t;        /* Type for resource measurement.  */
+      |            ^~~~~~~~~~~~~
+../Core/Inc/bits/types.h:114:12: error: unknown type name '__PID_T_TYPE'
+  114 | __STD_TYPE __PID_T_TYPE __pid_t;        /* Type of process identifications.  */
+      |            ^~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:126:12: error: unknown type name '__CLOCKID_T_TYPE'
+  126 | __STD_TYPE __CLOCKID_T_TYPE __clockid_t;
+      |            ^~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:118:12: error: unknown type name '__RLIM64_T_TYPE'
+  118 | __STD_TYPE __RLIM64_T_TYPE __rlim64_t;        /* Type for resource measurement (LFS).  */
+      |            ^~~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:121:12: error: unknown type name '__USECONDS_T_TYPE'
+  121 | __STD_TYPE __USECONDS_T_TYPE __useconds_t; /* Count of microseconds.  */
+      |            ^~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:126:29: error: conflicting types for '__clockid_t'
+  126 | __STD_TYPE __CLOCKID_T_TYPE __clockid_t;
+      |                             ^~~~~~~~~~~
+../Core/Inc/bits/types.h:115:12: error: unknown type name '__FSID_T_TYPE'
+  115 | __STD_TYPE __FSID_T_TYPE __fsid_t;        /* Type of file system IDs.  */
+      |            ^~~~~~~~~~~~~
+../Core/Inc/bits/types.h:121:30: error: conflicting types for '__useconds_t'
+  121 | __STD_TYPE __USECONDS_T_TYPE __useconds_t; /* Count of microseconds.  */
+      |                              ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:116:12: error: unknown type name '__CLOCK_T_TYPE'
+  116 | __STD_TYPE __CLOCK_T_TYPE __clock_t;        /* Type of CPU usage counts.  */
+      |            ^~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:119:12: error: unknown type name '__ID_T_TYPE'
+  119 | __STD_TYPE __ID_T_TYPE __id_t;                /* General type for IDs.  */
+      |            ^~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:211:23: note: previous declaration of '__useconds_t' was here
+  211 | typedef unsigned long __useconds_t; /* microseconds (unsigned) */
+      |                       ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:195:21: note: previous declaration of '__clockid_t' was here
+  195 | typedef _CLOCKID_T_ __clockid_t;
+      |                     ^~~~~~~~~~~
+../Core/Inc/bits/types.h:116:27: error: conflicting types for '__clock_t'
+  116 | __STD_TYPE __CLOCK_T_TYPE __clock_t;        /* Type of CPU usage counts.  */
+      |                           ^~~~~~~~~
+../Core/Inc/bits/types.h:119:24: error: conflicting types for '__id_t'
+  119 | __STD_TYPE __ID_T_TYPE __id_t;                /* General type for IDs.  */
+      |                        ^~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:67:20: note: previous declaration of '__id_t' was here
+   67 | typedef __uint32_t __id_t;
+      |                    ^~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:128:12: error: unknown type name '__TIMER_T_TYPE'
+  128 | __STD_TYPE __TIMER_T_TYPE __timer_t;
+      |            ^~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:182:19: note: previous declaration of '__clock_t' was here
+  182 | typedef _CLOCK_T_ __clock_t;
+      |                   ^~~~~~~~~
+../Core/Inc/bits/types.h:128:27: error: conflicting types for '__timer_t'
+  128 | __STD_TYPE __TIMER_T_TYPE __timer_t;
+      |                           ^~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:117:12: error: unknown type name '__RLIM_T_TYPE'
+  117 | __STD_TYPE __RLIM_T_TYPE __rlim_t;        /* Type for resource measurement.  */
+      |            ^~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:198:19: note: previous declaration of '__timer_t' was here
+  198 | typedef _TIMER_T_ __timer_t;
+      |                   ^~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:122:12: error: unknown type name '__SUSECONDS_T_TYPE'
+  122 | __STD_TYPE __SUSECONDS_T_TYPE __suseconds_t; /* Signed count of microseconds.  */
+      |            ^~~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:120:12: error: unknown type name '__TIME_T_TYPE'
+  120 | __STD_TYPE __TIME_T_TYPE __time_t;        /* Seconds since the Epoch.  */
+      |            ^~~~~~~~~~~~~
+../Core/Inc/bits/types.h:122:31: error: conflicting types for '__suseconds_t'
+  122 | __STD_TYPE __SUSECONDS_T_TYPE __suseconds_t; /* Signed count of microseconds.  */
+      |                               ^~~~~~~~~~~~~
+../Core/Inc/bits/types.h:120:26: error: conflicting types for '__time_t'
+  120 | __STD_TYPE __TIME_T_TYPE __time_t;        /* Seconds since the Epoch.  */
+      |                          ^~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:130:12: error: unknown type name '__BLKSIZE_T_TYPE'
+  130 | __STD_TYPE __BLKSIZE_T_TYPE __blksize_t;
+      |            ^~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:118:12: error: unknown type name '__RLIM64_T_TYPE'
+  118 | __STD_TYPE __RLIM64_T_TYPE __rlim64_t;        /* Type for resource measurement (LFS).  */
+      |            ^~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:130:29: error: conflicting types for '__blksize_t'
+  130 | __STD_TYPE __BLKSIZE_T_TYPE __blksize_t;
+      |                             ^~~~~~~~~~~
+../Core/Inc/bits/types.h:119:12: error: unknown type name '__ID_T_TYPE'
+  119 | __STD_TYPE __ID_T_TYPE __id_t;                /* General type for IDs.  */
+      |            ^~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:210:15: note: previous declaration of '__suseconds_t' was here
+  210 | typedef long  __suseconds_t; /* microseconds (signed) */
+      |               ^~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:189:18: note: previous declaration of '__time_t' was here
+  189 | typedef _TIME_T_ __time_t;
+      |                  ^~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:34:14: note: previous declaration of '__blksize_t' was here
+   34 | typedef long __blksize_t;
+      |              ^~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:123:12: error: unknown type name '__DADDR_T_TYPE'
+  123 | __STD_TYPE __DADDR_T_TYPE __daddr_t;        /* The type of a disk address.  */
+      |            ^~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:133:12: error: unknown type name '__BLKCNT_T_TYPE'
+  133 | __STD_TYPE __BLKCNT_T_TYPE __blkcnt_t;
+      |            ^~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:124:12: error: unknown type name '__KEY_T_TYPE'
+  124 | __STD_TYPE __KEY_T_TYPE __key_t;        /* Type of an IPC key.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:124:25: error: conflicting types for '__key_t'
+  124 | __STD_TYPE __KEY_T_TYPE __key_t;        /* Type of an IPC key.  */
+      |                         ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:108:14: note: previous declaration of '__key_t' was here
+  108 | typedef long __key_t;
+      |              ^~~~~~~
+../Core/Inc/bits/types.h:133:28: error: conflicting types for '__blkcnt_t'
+  133 | __STD_TYPE __BLKCNT_T_TYPE __blkcnt_t;
+      |                            ^~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:126:12: error: unknown type name '__CLOCKID_T_TYPE'
+  126 | __STD_TYPE __CLOCKID_T_TYPE __clockid_t;
+      |            ^~~~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:30:14: note: previous declaration of '__blkcnt_t' was here
+   30 | typedef long __blkcnt_t;
+      |              ^~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:121:12: error: unknown type name '__USECONDS_T_TYPE'
+  121 | __STD_TYPE __USECONDS_T_TYPE __useconds_t; /* Count of microseconds.  */
+      |            ^~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:121:30: error: conflicting types for '__useconds_t'
+  121 | __STD_TYPE __USECONDS_T_TYPE __useconds_t; /* Count of microseconds.  */
+      |                              ^~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:134:12: error: unknown type name '__BLKCNT64_T_TYPE'
+  134 | __STD_TYPE __BLKCNT64_T_TYPE __blkcnt64_t;
+      |            ^~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:119:24: error: conflicting types for '__id_t'
+  119 | __STD_TYPE __ID_T_TYPE __id_t;                /* General type for IDs.  */
+      |                        ^~~~~~
+../Core/Inc/bits/types.h:136:12: error: unknown type name '__FSBLKCNT_T_TYPE'
+  136 | __STD_TYPE __FSBLKCNT_T_TYPE __fsblkcnt_t;
+      |            ^~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:126:29: error: conflicting types for '__clockid_t'
+  126 | __STD_TYPE __CLOCKID_T_TYPE __clockid_t;
+      |                             ^~~~~~~~~~~
+../Core/Inc/bits/types.h:136:30: error: conflicting types for '__fsblkcnt_t'
+  136 | __STD_TYPE __FSBLKCNT_T_TYPE __fsblkcnt_t;
+      |                              ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:195:21: note: previous declaration of '__clockid_t' was here
+  195 | typedef _CLOCKID_T_ __clockid_t;
+      |                     ^~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:211:23: note: previous declaration of '__useconds_t' was here
+  211 | typedef unsigned long __useconds_t; /* microseconds (unsigned) */
+      |                       ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:67:20: note: previous declaration of '__id_t' was here
+   67 | typedef __uint32_t __id_t;
+      |                    ^~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:120:12: error: unknown type name '__TIME_T_TYPE'
+  120 | __STD_TYPE __TIME_T_TYPE __time_t;        /* Seconds since the Epoch.  */
+      |            ^~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:128:12: error: unknown type name '__TIMER_T_TYPE'
+  128 | __STD_TYPE __TIMER_T_TYPE __timer_t;
+      |            ^~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:120:26: error: conflicting types for '__time_t'
+  120 | __STD_TYPE __TIME_T_TYPE __time_t;        /* Seconds since the Epoch.  */
+      |                          ^~~~~~~~
+../Core/Inc/bits/types.h:128:27: error: conflicting types for '__timer_t'
+  128 | __STD_TYPE __TIMER_T_TYPE __timer_t;
+      |                           ^~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:189:18: note: previous declaration of '__time_t' was here
+  189 | typedef _TIME_T_ __time_t;
+      |                  ^~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:38:20: note: previous declaration of '__fsblkcnt_t' was here
+   38 | typedef __uint64_t __fsblkcnt_t;
+      |                    ^~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:122:12: error: unknown type name '__SUSECONDS_T_TYPE'
+  122 | __STD_TYPE __SUSECONDS_T_TYPE __suseconds_t; /* Signed count of microseconds.  */
+      |            ^~~~~~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:198:19: note: previous declaration of '__timer_t' was here
+  198 | typedef _TIMER_T_ __timer_t;
+      |                   ^~~~~~~~~
+../Core/Inc/bits/types.h:122:31: error: conflicting types for '__suseconds_t'
+  122 | __STD_TYPE __SUSECONDS_T_TYPE __suseconds_t; /* Signed count of microseconds.  */
+      |                               ^~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:137:12: error: unknown type name '__FSBLKCNT64_T_TYPE'
+  137 | __STD_TYPE __FSBLKCNT64_T_TYPE __fsblkcnt64_t;
+      |            ^~~~~~~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:210:15: note: previous declaration of '__suseconds_t' was here
+  210 | typedef long  __suseconds_t; /* microseconds (signed) */
+      |               ^~~~~~~~~~~~~
+../Core/Inc/bits/types.h:139:12: error: unknown type name '__FSFILCNT_T_TYPE'
+  139 | __STD_TYPE __FSFILCNT_T_TYPE __fsfilcnt_t;
+      |            ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:130:12: error: unknown type name '__BLKSIZE_T_TYPE'
+  130 | __STD_TYPE __BLKSIZE_T_TYPE __blksize_t;
+      |            ^~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:139:30: error: conflicting types for '__fsfilcnt_t'
+  139 | __STD_TYPE __FSFILCNT_T_TYPE __fsfilcnt_t;
+      |                              ^~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:123:12: error: unknown type name '__DADDR_T_TYPE'
+  123 | __STD_TYPE __DADDR_T_TYPE __daddr_t;        /* The type of a disk address.  */
+      |            ^~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:130:29: error: conflicting types for '__blksize_t'
+  130 | __STD_TYPE __BLKSIZE_T_TYPE __blksize_t;
+      |                             ^~~~~~~~~~~
+../Core/Inc/bits/types.h:124:12: error: unknown type name '__KEY_T_TYPE'
+  124 | __STD_TYPE __KEY_T_TYPE __key_t;        /* Type of an IPC key.  */
+      |            ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:42:20: note: previous declaration of '__fsfilcnt_t' was here
+   42 | typedef __uint32_t __fsfilcnt_t;
+      |                    ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:34:14: note: previous declaration of '__blksize_t' was here
+   34 | typedef long __blksize_t;
+      |              ^~~~~~~~~~~
+../Core/Inc/bits/types.h:124:25: error: conflicting types for '__key_t'
+  124 | __STD_TYPE __KEY_T_TYPE __key_t;        /* Type of an IPC key.  */
+      |                         ^~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:133:12: error: unknown type name '__BLKCNT_T_TYPE'
+  133 | __STD_TYPE __BLKCNT_T_TYPE __blkcnt_t;
+      |            ^~~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:121:12: error: unknown type name '__USECONDS_T_TYPE'
+  121 | __STD_TYPE __USECONDS_T_TYPE __useconds_t; /* Count of microseconds.  */
+      |            ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:140:12: error: unknown type name '__FSFILCNT64_T_TYPE'
+  140 | __STD_TYPE __FSFILCNT64_T_TYPE __fsfilcnt64_t;
+      |            ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:121:30: error: conflicting types for '__useconds_t'
+  121 | __STD_TYPE __USECONDS_T_TYPE __useconds_t; /* Count of microseconds.  */
+      |                              ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:108:14: note: previous declaration of '__key_t' was here
+  108 | typedef long __key_t;
+      |              ^~~~~~~
+../Core/Inc/bits/types.h:133:28: error: conflicting types for '__blkcnt_t'
+  133 | __STD_TYPE __BLKCNT_T_TYPE __blkcnt_t;
+      |                            ^~~~~~~~~~
+../Core/Inc/bits/types.h:142:12: error: unknown type name '__FSWORD_T_TYPE'
+  142 | __STD_TYPE __FSWORD_T_TYPE __fsword_t;
+      |            ^~~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:30:14: note: previous declaration of '__blkcnt_t' was here
+   30 | typedef long __blkcnt_t;
+      |              ^~~~~~~~~~
+../Core/Inc/bits/types.h:143:12: error: unknown type name '__SSIZE_T_TYPE'
+  143 | __STD_TYPE __SSIZE_T_TYPE __ssize_t; /* Type of a byte count, or error.  */
+      |            ^~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:211:23: note: previous declaration of '__useconds_t' was here
+  211 | typedef unsigned long __useconds_t; /* microseconds (unsigned) */
+      |                       ^~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:126:12: error: unknown type name '__CLOCKID_T_TYPE'
+  126 | __STD_TYPE __CLOCKID_T_TYPE __clockid_t;
+      |            ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:134:12: error: unknown type name '__BLKCNT64_T_TYPE'
+  134 | __STD_TYPE __BLKCNT64_T_TYPE __blkcnt64_t;
+      |            ^~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:126:29: error: conflicting types for '__clockid_t'
+  126 | __STD_TYPE __CLOCKID_T_TYPE __clockid_t;
+      |                             ^~~~~~~~~~~
+../Core/Inc/bits/types.h:136:12: error: unknown type name '__FSBLKCNT_T_TYPE'
+  136 | __STD_TYPE __FSBLKCNT_T_TYPE __fsblkcnt_t;
+      |            ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:122:12: error: unknown type name '__SUSECONDS_T_TYPE'
+  122 | __STD_TYPE __SUSECONDS_T_TYPE __suseconds_t; /* Signed count of microseconds.  */
+      |            ^~~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:145:12: error: unknown type name '__SYSCALL_SLONG_TYPE'
+  145 | __STD_TYPE __SYSCALL_SLONG_TYPE __syscall_slong_t;
+      |            ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:136:30: error: conflicting types for '__fsblkcnt_t'
+  136 | __STD_TYPE __FSBLKCNT_T_TYPE __fsblkcnt_t;
+      |                              ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:122:31: error: conflicting types for '__suseconds_t'
+  122 | __STD_TYPE __SUSECONDS_T_TYPE __suseconds_t; /* Signed count of microseconds.  */
+      |                               ^~~~~~~~~~~~~
+../Core/Inc/bits/types.h:147:12: error: unknown type name '__SYSCALL_ULONG_TYPE'
+  147 | __STD_TYPE __SYSCALL_ULONG_TYPE __syscall_ulong_t;
+      |            ^~~~~~~~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:38:20: note: previous declaration of '__fsblkcnt_t' was here
+   38 | typedef __uint64_t __fsblkcnt_t;
+      |                    ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:195:21: note: previous declaration of '__clockid_t' was here
+  195 | typedef _CLOCKID_T_ __clockid_t;
+      |                     ^~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:137:12: error: unknown type name '__FSBLKCNT64_T_TYPE'
+  137 | __STD_TYPE __FSBLKCNT64_T_TYPE __fsblkcnt64_t;
+      |            ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:139:12: error: unknown type name '__FSFILCNT_T_TYPE'
+  139 | __STD_TYPE __FSFILCNT_T_TYPE __fsfilcnt_t;
+      |            ^~~~~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:210:15: note: previous declaration of '__suseconds_t' was here
+  210 | typedef long  __suseconds_t; /* microseconds (signed) */
+      |               ^~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:128:12: error: unknown type name '__TIMER_T_TYPE'
+  128 | __STD_TYPE __TIMER_T_TYPE __timer_t;
+      |            ^~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:123:12: error: unknown type name '__DADDR_T_TYPE'
+  123 | __STD_TYPE __DADDR_T_TYPE __daddr_t;        /* The type of a disk address.  */
+      |            ^~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:124:12: error: unknown type name '__KEY_T_TYPE'
+  124 | __STD_TYPE __KEY_T_TYPE __key_t;        /* Type of an IPC key.  */
+      |            ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:128:27: error: conflicting types for '__timer_t'
+  128 | __STD_TYPE __TIMER_T_TYPE __timer_t;
+      |                           ^~~~~~~~~
+../Core/Inc/bits/types.h:139:30: error: conflicting types for '__fsfilcnt_t'
+  139 | __STD_TYPE __FSFILCNT_T_TYPE __fsfilcnt_t;
+      |                              ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:124:25: error: conflicting types for '__key_t'
+  124 | __STD_TYPE __KEY_T_TYPE __key_t;        /* Type of an IPC key.  */
+      |                         ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:198:19: note: previous declaration of '__timer_t' was here
+  198 | typedef _TIMER_T_ __timer_t;
+      |                   ^~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:42:20: note: previous declaration of '__fsfilcnt_t' was here
+   42 | typedef __uint32_t __fsfilcnt_t;
+      |                    ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:150:19: error: conflicting types for '__loff_t'
+  150 | typedef __off64_t __loff_t;        /* Type of file sizes and offsets (LFS).  */
+      |                   ^~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:130:12: error: unknown type name '__BLKSIZE_T_TYPE'
+  130 | __STD_TYPE __BLKSIZE_T_TYPE __blksize_t;
+      |            ^~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:140:12: error: unknown type name '__FSFILCNT64_T_TYPE'
+  140 | __STD_TYPE __FSFILCNT64_T_TYPE __fsfilcnt64_t;
+      |            ^~~~~~~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:108:14: note: previous declaration of '__key_t' was here
+  108 | typedef long __key_t;
+      |              ^~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:105:18: note: previous declaration of '__loff_t' was here
+  105 | typedef _off64_t __loff_t;
+      |                  ^~~~~~~~
+../Core/Inc/bits/types.h:142:12: error: unknown type name '__FSWORD_T_TYPE'
+  142 | __STD_TYPE __FSWORD_T_TYPE __fsword_t;
+      |            ^~~~~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types.h:156:23: error: conflicting types for '__socklen_t'
+  156 | __STD_TYPE __U32_TYPE __socklen_t;
+      |                       ^~~~~~~~~~~
+../Core/Inc/bits/types.h:143:12: error: unknown type name '__SSIZE_T_TYPE'
+  143 | __STD_TYPE __SSIZE_T_TYPE __ssize_t; /* Type of a byte count, or error.  */
+      |            ^~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:130:29: error: conflicting types for '__blksize_t'
+  130 | __STD_TYPE __BLKSIZE_T_TYPE __blksize_t;
+      |                             ^~~~~~~~~~~
+../Core/Inc/bits/types.h:145:12: error: unknown type name '__SYSCALL_SLONG_TYPE'
+  145 | __STD_TYPE __SYSCALL_SLONG_TYPE __syscall_slong_t;
+      |            ^~~~~~~~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:45,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:205:20: note: previous declaration of '__socklen_t' was here
+  205 | typedef __uint32_t __socklen_t;
+      |                    ^~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:126:12: error: unknown type name '__CLOCKID_T_TYPE'
+  126 | __STD_TYPE __CLOCKID_T_TYPE __clockid_t;
+      |            ^~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:147:12: error: unknown type name '__SYSCALL_ULONG_TYPE'
+  147 | __STD_TYPE __SYSCALL_ULONG_TYPE __syscall_ulong_t;
+      |            ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:126:29: error: conflicting types for '__clockid_t'
+  126 | __STD_TYPE __CLOCKID_T_TYPE __clockid_t;
+      |                             ^~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:34:14: note: previous declaration of '__blksize_t' was here
+   34 | typedef long __blksize_t;
+      |              ^~~~~~~~~~~
+../Core/Inc/bits/types.h:150:19: error: conflicting types for '__loff_t'
+  150 | typedef __off64_t __loff_t;        /* Type of file sizes and offsets (LFS).  */
+      |                   ^~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:195:21: note: previous declaration of '__clockid_t' was here
+  195 | typedef _CLOCKID_T_ __clockid_t;
+      |                     ^~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:133:12: error: unknown type name '__BLKCNT_T_TYPE'
+  133 | __STD_TYPE __BLKCNT_T_TYPE __blkcnt_t;
+      |            ^~~~~~~~~~~~~~~
+In file included from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/bits/types/struct_timespec.h:7:8: error: redefinition of 'struct timespec'
+    7 | struct timespec
+      |        ^~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:105:18: note: previous declaration of '__loff_t' was here
+  105 | typedef _off64_t __loff_t;
+      |                  ^~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:128:12: error: unknown type name '__TIMER_T_TYPE'
+  128 | __STD_TYPE __TIMER_T_TYPE __timer_t;
+      |            ^~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:128:27: error: conflicting types for '__timer_t'
+  128 | __STD_TYPE __TIMER_T_TYPE __timer_t;
+      |                           ^~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types.h:156:23: error: conflicting types for '__socklen_t'
+  156 | __STD_TYPE __U32_TYPE __socklen_t;
+      |                       ^~~~~~~~~~~
+../Core/Inc/bits/types.h:133:28: error: conflicting types for '__blkcnt_t'
+  133 | __STD_TYPE __BLKCNT_T_TYPE __blkcnt_t;
+      |                            ^~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:198:19: note: previous declaration of '__timer_t' was here
+  198 | typedef _TIMER_T_ __timer_t;
+      |                   ^~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:205:20: note: previous declaration of '__socklen_t' was here
+  205 | typedef __uint32_t __socklen_t;
+      |                    ^~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\timespec.h:38,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\select.h:16,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:50,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\unistd.h:12,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\unistd.h:4,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\pthread.h:25,
+                 from ../Core/Src/client_queue.h:5,
+                 from ../Core/Src/client_queue.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_timespec.h:47:8: note: originally defined here
+   47 | struct timespec {
+      |        ^~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:30:14: note: previous declaration of '__blkcnt_t' was here
+   30 | typedef long __blkcnt_t;
+      |              ^~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:130:12: error: unknown type name '__BLKSIZE_T_TYPE'
+  130 | __STD_TYPE __BLKSIZE_T_TYPE __blksize_t;
+      |            ^~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:130:29: error: conflicting types for '__blksize_t'
+  130 | __STD_TYPE __BLKSIZE_T_TYPE __blksize_t;
+      |                             ^~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:134:12: error: unknown type name '__BLKCNT64_T_TYPE'
+  134 | __STD_TYPE __BLKCNT64_T_TYPE __blkcnt64_t;
+      |            ^~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:136:12: error: unknown type name '__FSBLKCNT_T_TYPE'
+  136 | __STD_TYPE __FSBLKCNT_T_TYPE __fsblkcnt_t;
+      |            ^~~~~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:34:14: note: previous declaration of '__blksize_t' was here
+   34 | typedef long __blksize_t;
+      |              ^~~~~~~~~~~
+../Core/Inc/bits/types.h:136:30: error: conflicting types for '__fsblkcnt_t'
+  136 | __STD_TYPE __FSBLKCNT_T_TYPE __fsblkcnt_t;
+      |                              ^~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:133:12: error: unknown type name '__BLKCNT_T_TYPE'
+  133 | __STD_TYPE __BLKCNT_T_TYPE __blkcnt_t;
+      |            ^~~~~~~~~~~~~~~
+In file included from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/bits/types/struct_timespec.h:7:8: error: redefinition of 'struct timespec'
+    7 | struct timespec
+      |        ^~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:38:20: note: previous declaration of '__fsblkcnt_t' was here
+   38 | typedef __uint64_t __fsblkcnt_t;
+      |                    ^~~~~~~~~~~~
+In file included from ../Core/Src/client_queue.h:6,
+                 from ../Core/Src/client_queue.c:1:
+../Core/Inc/semaphore.h:22:10: fatal error: bits/semaphore.h: No such file or directory
+   22 | #include <bits/semaphore.h>
+      |          ^~~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:133:28: error: conflicting types for '__blkcnt_t'
+  133 | __STD_TYPE __BLKCNT_T_TYPE __blkcnt_t;
+      |                            ^~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:30:14: note: previous declaration of '__blkcnt_t' was here
+   30 | typedef long __blkcnt_t;
+      |              ^~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:137:12: error: unknown type name '__FSBLKCNT64_T_TYPE'
+  137 | __STD_TYPE __FSBLKCNT64_T_TYPE __fsblkcnt64_t;
+      |            ^~~~~~~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\timespec.h:38,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\select.h:16,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:50,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdio.h:61,
+                 from ../Core/Src/main.h:5,
+                 from ../Core/Src/freertos.c:24:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_timespec.h:47:8: note: originally defined here
+   47 | struct timespec {
+      |        ^~~~~~~~
+compilation terminated.
+../Core/Inc/bits/types.h:139:12: error: unknown type name '__FSFILCNT_T_TYPE'
+  139 | __STD_TYPE __FSFILCNT_T_TYPE __fsfilcnt_t;
+      |            ^~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:139:30: error: conflicting types for '__fsfilcnt_t'
+  139 | __STD_TYPE __FSFILCNT_T_TYPE __fsfilcnt_t;
+      |                              ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:42:20: note: previous declaration of '__fsfilcnt_t' was here
+   42 | typedef __uint32_t __fsfilcnt_t;
+      |                    ^~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:140:12: error: unknown type name '__FSFILCNT64_T_TYPE'
+  140 | __STD_TYPE __FSFILCNT64_T_TYPE __fsfilcnt64_t;
+      |            ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:142:12: error: unknown type name '__FSWORD_T_TYPE'
+  142 | __STD_TYPE __FSWORD_T_TYPE __fsword_t;
+      |            ^~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:55: Core/Src/client_queue.o] Error 1
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:134:12: error: unknown type name '__BLKCNT64_T_TYPE'
+  134 | __STD_TYPE __BLKCNT64_T_TYPE __blkcnt64_t;
+      |            ^~~~~~~~~~~~~~~~~
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Src/main.h:10,
+                 from ../Core/Src/freertos.c:24:
+../Core/Inc/semaphore.h:22:10: fatal error: bits/semaphore.h: No such file or directory
+   22 | #include <bits/semaphore.h>
+      |          ^~~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:136:12: error: unknown type name '__FSBLKCNT_T_TYPE'
+  136 | __STD_TYPE __FSBLKCNT_T_TYPE __fsblkcnt_t;
+      |            ^~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:143:12: error: unknown type name '__SSIZE_T_TYPE'
+  143 | __STD_TYPE __SSIZE_T_TYPE __ssize_t; /* Type of a byte count, or error.  */
+      |            ^~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:136:30: error: conflicting types for '__fsblkcnt_t'
+  136 | __STD_TYPE __FSBLKCNT_T_TYPE __fsblkcnt_t;
+      |                              ^~~~~~~~~~~~
+compilation terminated.
+../Core/Inc/bits/types.h:145:12: error: unknown type name '__SYSCALL_SLONG_TYPE'
+  145 | __STD_TYPE __SYSCALL_SLONG_TYPE __syscall_slong_t;
+      |            ^~~~~~~~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:38:20: note: previous declaration of '__fsblkcnt_t' was here
+   38 | typedef __uint64_t __fsblkcnt_t;
+      |                    ^~~~~~~~~~~~
+../Core/Inc/bits/types.h:147:12: error: unknown type name '__SYSCALL_ULONG_TYPE'
+  147 | __STD_TYPE __SYSCALL_ULONG_TYPE __syscall_ulong_t;
+      |            ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:150:19: error: conflicting types for '__loff_t'
+  150 | typedef __off64_t __loff_t;        /* Type of file sizes and offsets (LFS).  */
+      |                   ^~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:137:12: error: unknown type name '__FSBLKCNT64_T_TYPE'
+  137 | __STD_TYPE __FSBLKCNT64_T_TYPE __fsblkcnt64_t;
+      |            ^~~~~~~~~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:105:18: note: previous declaration of '__loff_t' was here
+  105 | typedef _off64_t __loff_t;
+      |                  ^~~~~~~~
+make: *** [Core/Src/subdir.mk:57: Core/Src/freertos.o] Error 1
+../Core/Inc/bits/types.h:139:12: error: unknown type name '__FSFILCNT_T_TYPE'
+  139 | __STD_TYPE __FSFILCNT_T_TYPE __fsfilcnt_t;
+      |            ^~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:139:30: error: conflicting types for '__fsfilcnt_t'
+  139 | __STD_TYPE __FSFILCNT_T_TYPE __fsfilcnt_t;
+      |                              ^~~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types.h:156:23: error: conflicting types for '__socklen_t'
+  156 | __STD_TYPE __U32_TYPE __socklen_t;
+      |                       ^~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:42:20: note: previous declaration of '__fsfilcnt_t' was here
+   42 | typedef __uint32_t __fsfilcnt_t;
+      |                    ^~~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:205:20: note: previous declaration of '__socklen_t' was here
+  205 | typedef __uint32_t __socklen_t;
+      |                    ^~~~~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:140:12: error: unknown type name '__FSFILCNT64_T_TYPE'
+  140 | __STD_TYPE __FSFILCNT64_T_TYPE __fsfilcnt64_t;
+      |            ^~~~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:142:12: error: unknown type name '__FSWORD_T_TYPE'
+  142 | __STD_TYPE __FSWORD_T_TYPE __fsword_t;
+      |            ^~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:143:12: error: unknown type name '__SSIZE_T_TYPE'
+  143 | __STD_TYPE __SSIZE_T_TYPE __ssize_t; /* Type of a byte count, or error.  */
+      |            ^~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:145:12: error: unknown type name '__SYSCALL_SLONG_TYPE'
+  145 | __STD_TYPE __SYSCALL_SLONG_TYPE __syscall_slong_t;
+      |            ^~~~~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/bits/types/struct_timespec.h:7:8: error: redefinition of 'struct timespec'
+    7 | struct timespec
+      |        ^~~~~~~~
+../Core/Inc/bits/types.h:147:12: error: unknown type name '__SYSCALL_ULONG_TYPE'
+  147 | __STD_TYPE __SYSCALL_ULONG_TYPE __syscall_ulong_t;
+      |            ^~~~~~~~~~~~~~~~~~~~
+../Core/Inc/bits/types.h:150:19: error: conflicting types for '__loff_t'
+  150 | typedef __off64_t __loff_t;        /* Type of file sizes and offsets (LFS).  */
+      |                   ^~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:105:18: note: previous declaration of '__loff_t' was here
+  105 | typedef _off64_t __loff_t;
+      |                  ^~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\timespec.h:38,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\select.h:16,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:50,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdio.h:61,
+                 from ../Core/Src/main.h:5,
+                 from ../Core/Src/main.c:1:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_timespec.h:47:8: note: originally defined here
+   47 | struct timespec {
+      |        ^~~~~~~~
+In file included from ../Core/Inc/bits/types/struct_timespec.h:4,
+                 from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types.h:156:23: error: conflicting types for '__socklen_t'
+  156 | __STD_TYPE __U32_TYPE __socklen_t;
+      |                       ^~~~~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\reent.h:15,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdlib.h:18,
+                 from ../Core/Src/main.h:4,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_types.h:205:20: note: previous declaration of '__socklen_t' was here
+  205 | typedef __uint32_t __socklen_t;
+      |                    ^~~~~~~~~~~
+In file included from ../Core/Src/main.h:10,
+                 from ../Core/Src/main.c:1:
+../Core/Inc/semaphore.h:22:10: fatal error: bits/semaphore.h: No such file or directory
+   22 | #include <bits/semaphore.h>
+      |          ^~~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/semaphore.h:19,
+                 from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/bits/types/struct_timespec.h:7:8: error: redefinition of 'struct timespec'
+    7 | struct timespec
+      |        ^~~~~~~~
+In file included from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\timespec.h:38,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\select.h:16,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\types.h:50,
+                 from c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\stdio.h:61,
+                 from ../Core/Src/main.h:5,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+c:\st\stm32cubeide_1.5.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\include\sys\_timespec.h:47:8: note: originally defined here
+   47 | struct timespec {
+      |        ^~~~~~~~
+compilation terminated.
+In file included from ../Core/Src/main.h:10,
+                 from ../Core/Src/stm32l4xx_hal_msp.c:23:
+../Core/Inc/semaphore.h:22:10: fatal error: bits/semaphore.h: No such file or directory
+   22 | #include <bits/semaphore.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:61: Core/Src/main.o] Error 1
+make: *** [Core/Src/subdir.mk:65: Core/Src/stm32l4xx_hal_msp.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+10:34:11 Build Failed. 229 errors, 0 warnings. (took 1s.9ms)
+

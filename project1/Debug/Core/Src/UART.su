@@ -1,0 +1,7 @@
+UART.c:10:6:UART2_Init	8	static
+UART.c:29:6:UART2_GPIO_Init	4	static
+UART.c:53:6:USART_Init	16	static
+UART.c:101:9:USART_Read	16	static
+UART.c:109:6:USART_Write	32	static
+UART.c:125:6:USART_Delay	24	static
+UART.c:130:6:USART_IRQHandler	24	static

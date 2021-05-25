@@ -1,0 +1,14 @@
+bank.c:11:6:print_line	16	static
+bank.c:17:6:print_metrics	256	static
+bank.c:34:6:int_format_print	32	dynamic
+bank.c:42:6:float_format_print	32	dynamic
+bank.c:50:6:set_current_time	16	static
+bank.c:54:5:get_current_time	16	static
+bank.c:59:15:teller_init	48	static
+bank.c:64:6:bank_init	48	static
+bank.c:71:18:metric_init	168	static
+bank.c:90:6:bank_thread	80	static
+bank.c:157:6:thread_init	176	static
+bank.c:171:6:teller_thread	80	static
+bank.c:234:5:get_random	24	static
+bank.c:242:7:teller_status_to_string	16	static

@@ -1,0 +1,8 @@
+TIMER.c:22:6:timer_init	4	static
+TIMER.c:49:6:servo_timers_init	4	static
+TIMER.c:74:6:start_timer	16	static
+TIMER.c:86:6:start_timers	16	static
+TIMER.c:96:6:stop_timer	16	static
+TIMER.c:108:6:stop_timers	16	static
+TIMER.c:122:10:get_current_measurement	16	static
+TIMER.c:139:10:get_current_time	16	static

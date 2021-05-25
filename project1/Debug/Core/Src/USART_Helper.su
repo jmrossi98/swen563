@@ -1,0 +1,6 @@
+USART_Helper.c:13:6:usart_write_simple	32	dynamic
+USART_Helper.c:26:6:usart_real_time_write	24	static
+USART_Helper.c:52:6:usart_write_data_string	2016	static
+USART_Helper.c:71:6:usart_read_simple	8	static
+USART_Helper.c:81:6:usart_read_no_block	8	static
+USART_Helper.c:89:6:usart_terminal_character_simple	8	static
